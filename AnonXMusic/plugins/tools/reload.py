@@ -5,6 +5,7 @@ from pyrogram import Client, filters
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from os import getenv
 from AnonXMusic import app
