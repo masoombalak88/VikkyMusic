@@ -4,7 +4,6 @@ from pyrogram import *
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
-from .. import *
 
 from AnonXMusic import app
 from AnonXMusic.misc import SUDOERS
