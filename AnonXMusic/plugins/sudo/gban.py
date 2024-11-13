@@ -15,6 +15,7 @@ from AnonXMusic.utils.database import (
     get_served_chats,
     is_banned_user,
     remove_banned_user,
+from AnonXmusic.modules.data import (
     is_gdel_user,
     get_gdel_user, get_gdel_count,
     add_gdel_user, del_gdel_user
