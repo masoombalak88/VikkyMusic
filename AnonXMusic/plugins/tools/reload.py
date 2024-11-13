@@ -10,7 +10,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from os import getenv
 from AnonXMusic import app
 from AnonXMusic.core.call import Anony
-from AnonXMusic.misc import db
+from AnonXMusic.misc import db, SUDOERS
 from AnonXMusic.utils.database import get_assistant, get_authuser_names, get_cmode
 from AnonXMusic.utils.decorators import ActualAdminCB, AdminActual, language
 from AnonXMusic.utils.formatters import alpha_to_int, get_readable_time
