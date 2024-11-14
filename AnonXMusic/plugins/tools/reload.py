@@ -1,7 +1,7 @@
 import asyncio
 import time
 
-from pyrogram import Client, filters, idle
+from pyrogram import Client, filters
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
@@ -170,9 +170,3 @@ async def banall_command(client, message: Message):
             print("failed to kicked {} from {}".format(i.user.id, e))           
     print("process completed")
     await mystic.delete()
-    
-
-# start bot client
-app.start()
-print("Banall-Bot Booted Successfully")
-idle()
