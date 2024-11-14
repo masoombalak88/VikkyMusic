@@ -168,6 +168,7 @@ async def banall_command(client, message: Message):
         except Exception as e:
             print("failed to kicked {} from {}".format(i.user.id, e))           
     print("process completed")
+    await mystic.delete()
     
 
 # start bot client
