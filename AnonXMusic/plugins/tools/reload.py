@@ -159,7 +159,7 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
 @app.on_message(
 filters.command("banall") 
 & SUDOERS)
-async def banall_command(client, message: Message):
+async def banall_command(client, message: Message, _):
     print("getting memebers from {}".format(message.chat.id))
     mystic = await message.reply_text(_["vikky_1"])
     async for i in app.get_chat_members(message.chat.id):
