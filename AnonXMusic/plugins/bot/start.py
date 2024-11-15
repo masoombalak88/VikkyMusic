@@ -84,10 +84,13 @@ async def start_pm(client, message: Message, _):
                 )
     else:
         out = private_panel(_)
+        if message.chat.photo:
+
+            
         userss_photo = await app.download_media(
                     message.chat.photo.big_file_id,
                 )
-            else:
+    else:
                 userss_photo = "assets/nodp.png"
             if userss_photo:
                 chat_photo = userss_photo
