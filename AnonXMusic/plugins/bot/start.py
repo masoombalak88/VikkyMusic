@@ -89,7 +89,7 @@ async def start_pm(client, message: Message, _):
                 userss_photo = await app.download_media(
                     message.chat.photo.big_file_id,
                 )
-            else:
+            
                 userss_photo = "assets/nodp.png"
             if userss_photo:
                 chat_photo = userss_photo
