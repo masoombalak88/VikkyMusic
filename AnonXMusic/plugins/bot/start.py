@@ -86,8 +86,7 @@ async def start_pm(client, message: Message, _):
         out = private_panel(_)
         if message.chat.photo:
 
-            
-        userss_photo = await app.download_media(
+                userss_photo = await app.download_media(
                     message.chat.photo.big_file_id,
                 )
             else:
@@ -98,7 +97,7 @@ async def start_pm(client, message: Message, _):
 
         except AttributeError:
             chat_photo = "assets/nodp.png"
-        await vips.delete()
+        await m.delete()
         await message.reply_photo(
             photo=chat_photo,
             caption=_["start_2"].format(message.from_user.mention, app.mention),
